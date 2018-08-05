@@ -14,3 +14,24 @@
 Route::get('/', function () {
     return view('fronts.index');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+// Admin Route
+Route::prefix('nana-admin')->group(function () {
+    Route::get('/', "DashboardController@index");
+
+    Route::get('login', function(){
+        return redirect('/login');
+    });
+    Route::get('logout', "UserController@logout");
+    
+    Route::get('dashboard', "DashboardController@index");
+
+    Route::get('users', function () {
+        
+        return view('layouts.app');
+    });
+});
