@@ -18,6 +18,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/sign-in', 'FrontSecurityController@sign_in');
+Route::get('/sign-up', 'FrontSecurityController@sign_up');
+Route::get('/forgot-password', 'FrontSecurityController@forget');
+Route::get('/reset', 'FrontSecurityController@reset');
 
 // Admin Route
 Route::prefix('nana-admin')->group(function () {

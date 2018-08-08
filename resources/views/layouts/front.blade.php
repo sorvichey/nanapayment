@@ -9,7 +9,6 @@
         <link href="{{asset('fronts/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
         <link href="{{asset('fronts/vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-        <link href="{{asset('fronts/css/clean-blog.css')}}" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="{{asset('fronts/css/custom.css')}}">
     </head>
     <body>
@@ -47,8 +46,12 @@
                     <i class="fa fa-search text-white"></i>
                 </form>
                 <ul class="ml-auto">
-                        <button class="btn btn-outline-primary flat" type="submit">Login</button>
-                        <button class="btn btn-outline-primary flat" type="submit">Sign Up</button>
+                    <a href="{{url('/sign-in')}}" class="btn btn-outline-primary flat">
+                        Sign In
+                    </a>
+                    <a href="{{url('/sign-up')}}" class="btn btn-outline-primary flat">
+                        Sign Up
+                    </a>
                 </ul>
                 </div>
             </div>
@@ -125,10 +128,7 @@
                 </div>
             </div>
         </footer>
-
-        <!-- Bootstrap core JavaScript -->
         <script src="{{asset('fronts/vendor/jquery/jquery.min.js')}}"></script>
         <script src="{{asset('fronts/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-        <script src="{{asset('fronts/js/clean-blog.min.js')}}"></script>
     </body>
 </html>
